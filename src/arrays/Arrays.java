@@ -5,12 +5,6 @@ import java.util.List;
 
 public class Arrays {
 
-    /**
-     * Array lista de n elementos
-     * Matriz tabela n x m elementos
-     * Matriz == Array de Array - Basicamente uma tabela de excel
-     */
-
     public void verifyFirstRepetition(ArrayList a){
         List<String> newList = new ArrayList<>();
 

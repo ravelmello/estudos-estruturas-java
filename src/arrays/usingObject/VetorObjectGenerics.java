@@ -1,16 +1,17 @@
 package arrays.usingObject;
 
-public class VetorObject {
+public class VetorObjectGenerics<T> {
+
 
     public Object[] elems;
     private int tamanho;
 
-    public VetorObject(int cap) {
-        this.elems = new String[cap];
+    public VetorObjectGenerics(int cap) {
+        this.elems = (T[]) new Object[cap];
         this.tamanho = 0;
     }
 
-    public void adiciona(Object elem) throws Exception {
+    public void adiciona(T elem) throws Exception {
         int cap = this.elems.length;
 
         this.aumentaCap();
@@ -22,7 +23,7 @@ public class VetorObject {
         }
     }
 
-    public boolean adiciona(int posicao, Object elem) {
+    public boolean adiciona(int posicao, T elem) {
 
         this.aumentaCap();
 
@@ -65,7 +66,7 @@ public class VetorObject {
         return this.elems[posicao];
     }
 
-    public int busca(Object elem){
+    public int busca(T elem){
         //algoritmo de busca sequencial
         for(int i=0; i<this.tamanho; i++) {
             if(this.elems[i].equals(elem)) {
@@ -77,7 +78,7 @@ public class VetorObject {
 
     private void aumentaCap(){
         if(this.tamanho == this.elems.length) {
-            Object[] newElems = new Object[this.elems.length * 2];
+            Object[] newElems = (T[]) new Object[this.elems.length * 2];
             for(int i=0; i<this.tamanho; i++){
                 newElems[i] = this.elems[i];
             }

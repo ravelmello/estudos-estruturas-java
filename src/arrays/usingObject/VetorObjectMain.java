@@ -3,7 +3,7 @@ package arrays.usingObject;
 public class VetorObjectMain {
 
     public static void main(String[] args) throws Exception {
-        VetorObject ob = new VetorObject(10);
+        VetorObjectGenerics<String> ob = new VetorObjectGenerics<String>(10);
 
         try {
 
@@ -17,6 +17,7 @@ public class VetorObjectMain {
         System.out.println(ob);
 
         ob.adiciona("elemento 04");
+        ob.adiciona(4);
 
         ob.buscaElemento(1);
 

@@ -14,7 +14,7 @@ public class Main {
         letters.add("B");
         letters.add("C");
         letters.add("D");
-        letters.add("A");
+        letters.add("E");
         letters.add("C");
 
         a.verifyFirstRepetition(letters);
